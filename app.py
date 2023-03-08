@@ -1,3 +1,4 @@
 import streamlit as st
+from data import etfs
 
-st.write("Hello World!")
+st.write(etfs)
