@@ -8,3 +8,7 @@ def load_etf_list():
 @st.cache
 def load_history(ticker):
     return fdr.DataReader(ticker)
+
+def get_pv(df):
+    v = df.iloc[-1].tail(20)
+    return (v.Close * v.Volume).mean()

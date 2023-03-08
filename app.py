@@ -1,4 +1,9 @@
 import streamlit as st
-from data import load_etf_list
+from data import *
 
-st.write(load_etf_list())
+etf_list = load_etf_list()
+st.write(etf_list)
+
+df = load_history(etf_list.iloc[0, 0])
+pv = get_pv(df)
+st.write(pv)
