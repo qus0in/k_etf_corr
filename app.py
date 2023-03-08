@@ -1,4 +1,4 @@
 import streamlit as st
-from data import etfs
+from data import load_etf_list
 
-st.write(etfs)
+st.write(load_etf_list())
